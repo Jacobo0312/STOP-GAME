@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "ui.Main",
+            "projectName": "CLIENT-GAME_d2858eb3",
+            "vmArgs": "--module-path C:/Users/juanj/Downloads/openjfx-17.0.0.1_windows-x64_bin-sdk/javafx-sdk-17.0.0.1/lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "main.Main",
+            "projectName": "SERVER-GAME_afa8be3b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "ui.Main",
+            "projectName": "Server_112e6890",
+            "vmArgs": "--module-path C:/Users/juanj/Downloads/openjfx-17.0.0.1_windows-x64_bin-sdk/javafx-sdk-17.0.0.1/lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "ui.Main",
+            "projectName": "Client_f63f2d18",
+            "vmArgs": "--module-path C:/Users/juanj/Downloads/openjfx-17.0.0.1_windows-x64_bin-sdk/javafx-sdk-17.0.0.1/lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "ui.Main",
+            "projectName": "JAVA-FX_SINGLETON_bb5b03a",
+            "vmArgs": "--module-path C:/Users/juanj/Downloads/openjfx-17.0.0.1_windows-x64_bin-sdk/javafx-sdk-17.0.0.1/lib --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}
