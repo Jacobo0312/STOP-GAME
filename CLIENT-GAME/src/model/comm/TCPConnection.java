@@ -3,7 +3,7 @@ package model.comm;
 import java.io.IOException;
 import java.net.Socket;
 
-import model.comm.Receptor.OnMessageListener;
+import model.comm.Receiver.OnMessageListener;
 
 public class TCPConnection extends Thread{
 
@@ -24,8 +24,8 @@ public class TCPConnection extends Thread{
 	private Socket socket;
 	private String ip;
 	private int puerto;
-	private Receptor receptor;
-	private Emisor emisor;
+	private Receiver receiver;
+	private Transmitter transmitter;
 	private OnMessageListener listener;
 	
 	
@@ -47,12 +47,11 @@ public class TCPConnection extends Thread{
 			socket = new Socket(ip, puerto);
 			System.out.println("Cliente conectado");
 			
-			receptor = new Receptor(socket.getInputStream());
-			receptor.setListener(listener);
-			receptor.start();
+			receiver = new Receiver(socket.getInputStream());
+			receiver.setListener(listener);
+			receiver.start();
 			
-			emisor = new Emisor(socket.getOutputStream());
-			
+			transmitter = new Transmitter(socket.getOutputStream());
 			
 			
 			
@@ -65,8 +64,8 @@ public class TCPConnection extends Thread{
 		
 	}
 	
-	public Emisor getEmisor() {
-		return this.emisor;
+	public Transmitter getTransmitter() {
+		return this.transmitter;
 	}
 	
 	

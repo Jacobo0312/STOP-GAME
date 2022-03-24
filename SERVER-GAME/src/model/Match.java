@@ -2,11 +2,10 @@ package model;
 
 public class Match {
 
+    public String type = "Match";
 
-    public String type="Match";
-
-    private char letter=' ';
-    private int id=0;
+    private char letter = ' ';
+    private int id = 0;
 
     public Match() {
         this.letter = randomLetter();
@@ -20,8 +19,8 @@ public class Match {
         this.letter = letter;
     }
 
-    private char randomLetter(){
-        return (char)(Math.random()*26 + 'A'); 
+    private char randomLetter() {
+        return (char) (Math.random() * 26 + 'A');
     }
 
     public String getType() {
@@ -40,8 +39,4 @@ public class Match {
         this.id = id;
     }
 
-    
-
-    
-    
 }
