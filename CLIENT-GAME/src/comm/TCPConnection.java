@@ -1,9 +1,9 @@
-package model.comm;
+package comm;
 
 import java.io.IOException;
 import java.net.Socket;
 
-import model.comm.Receiver.OnMessageListener;
+import comm.Receiver.OnMessageListener;
 
 public class TCPConnection extends Thread{
 
@@ -47,7 +47,6 @@ public class TCPConnection extends Thread{
 	public void searchServer(){
 		try {
 			
-			
 			System.out.println("Esperando un servidor");
 			socket = new Socket(ip, puerto);
 			System.out.println("Cliente conectado");
@@ -59,9 +58,9 @@ public class TCPConnection extends Thread{
 			transmitter = new Transmitter(socket.getOutputStream());
 			
 			
-			
 		} catch (IOException e) {
 			e.printStackTrace();
+			System.out.println("No se pudo conectar con el servidor");
 		}
 	}
 	public void setListenerOfMessages(OnMessageListener listener) {

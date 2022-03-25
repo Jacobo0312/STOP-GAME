@@ -1,8 +1,9 @@
 package model;
 
 import com.google.gson.Gson;
-import model.comm.TCPConnection;
-import model.comm.Receiver.OnMessageListener;
+
+import comm.TCPConnection;
+import comm.Receiver.OnMessageListener;
 
 public class ControllerGame implements OnMessageListener{
 
@@ -16,7 +17,6 @@ public class ControllerGame implements OnMessageListener{
 	private StopGameListener stopGameListener;
 	private LoadResultsListener loadResultsListener;
 	private Words[] results;
-
 
 		
 	private static ControllerGame instance = null;

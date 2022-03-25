@@ -1,4 +1,4 @@
-package model.comm;
+package comm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
