@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Ventana2">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Ventana2">
    <children>
       <Label alignment="CENTER" layoutX="143.0" layoutY="24.0" text="Resultados" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
@@ -38,7 +38,7 @@
       <Label fx:id="opponentLocationResult" layoutX="431.0" layoutY="249.0" text="Texto (50)" />
       <Label fx:id="ownObjectResult" layoutX="275.0" layoutY="309.0" text="Texto (100)" />
       <Label fx:id="opponentObjectResult" layoutX="431.0" layoutY="309.0" text="Texto (50)" />
-      <Button fx:id="finishBtn" layoutX="269.0" layoutY="439.0" mnemonicParsing="false" text="Finalizar" />
+      <Button fx:id="finishBtn" layoutX="269.0" layoutY="439.0" mnemonicParsing="false" onAction="#finish" text="Finalizar" />
       <Separator layoutX="177.0" layoutY="308.0" prefWidth="200.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="345.0" />
       <Label layoutX="42.0" layoutY="364.0" text="Total" AnchorPane.leftAnchor="36.0" />
       <Label fx:id="ownTotal" layoutX="275.0" layoutY="364.0" text="Texto (100)" />

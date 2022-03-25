@@ -14,6 +14,7 @@ public class Game implements OnMessageListener {
     private Client player2;
     private String id;
     private Words[] results = new Words[2];
+    private FinishGameListener finishGameListener;
 
     public Game(Client player1, Client player2) {
         this.player1 = player1;
@@ -63,12 +64,11 @@ public class Game implements OnMessageListener {
 
     @Override
     public void OnMessage(String json) {
-        System.out.println("GAME: " + id);
-        System.out.println("Recibido: " + json);
+        //System.out.println("GAME: " + id);
+        //System.out.println("Recibido: " + json);
 
         Generic generic = gson.fromJson(json, Generic.class);
-        // System.out.println(json);
-        // System.out.println(generic.type);
+
 
         switch (generic.type) {
             case "Words":
@@ -87,10 +87,9 @@ public class Game implements OnMessageListener {
 
                     calculatePoints();
                     String jsonArray = gson.toJson(results);
-                    // System.out.println(jsonArray);
                     player1.getTransmitter().sendMessage(jsonArray);
                     player2.getTransmitter().sendMessage(jsonArray);
-
+                    finishGameListener.finishGame(this);
                 }
 
                 break;
@@ -104,20 +103,37 @@ public class Game implements OnMessageListener {
         results[1].setPoints(400);
         if (results[0].getName().equals(results[1].getName())) {
             results[0].subPoints(50);
+            results[1].subPoints(50);
         }
 
         if (results[0].getAnimal().equals(results[1].getAnimal())) {
             results[0].subPoints(50);
+            results[1].subPoints(50);
         }
 
         if (results[0].getSite().equals(results[1].getSite())) {
             results[0].subPoints(50);
+            results[1].subPoints(50);
         }
 
         if (results[0].getThing().equals(results[1].getThing())) {
             results[0].subPoints(50);
+            results[1].subPoints(50);
         }
 
+
     }
+
+
+    public interface FinishGameListener {
+    public void finishGame(Game game);
+        
+    }
+
+
+    public void setFinishGameListener(FinishGameListener listener) {
+        this.finishGameListener=listener;
+    }
+
 
 }

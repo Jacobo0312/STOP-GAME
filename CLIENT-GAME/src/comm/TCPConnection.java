@@ -40,6 +40,11 @@ public class TCPConnection extends Thread{
 	
 	@Override
 	public void run() {
+		searchServer();
+	}
+
+
+	public void searchServer(){
 		try {
 			
 			

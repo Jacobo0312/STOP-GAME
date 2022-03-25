@@ -1,16 +1,6 @@
 package model;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import com.google.gson.Gson;
-
-import javafx.application.Platform;
-import javafx.scene.paint.Stop;
-import model.Generic;
-import model.Match;
-import model.Words;
 import model.comm.TCPConnection;
 import model.comm.Receiver.OnMessageListener;
 
@@ -40,6 +30,10 @@ public class ControllerGame implements OnMessageListener{
         idGame="TEST";
 	}
 
+
+
+
+
 	public static synchronized ControllerGame getInstance() {
 		
 		if(instance == null) {
@@ -50,19 +44,6 @@ public class ControllerGame implements OnMessageListener{
 		
 	}
 
-
-/*
-	public ControllerGame() {
-		connection = TCPConnection.getInstance();
-		connection.setIp("127.0.0.1");
-		connection.setPuerto(5000);
-		connection.setListenerOfMessages(this);
-		connection.start();
-		id=0;
-        idGame="TEST";
-		
-	}
-	*/
 
 	public void setInitGameListener(InitGameListener listener) {
 		this.initGameListener = listener;
@@ -165,7 +146,10 @@ public class ControllerGame implements OnMessageListener{
 		this.results = results;
 	}
 
-	
+
+    public void restart() {
+		connection.searchServer();
+    }
 
 
 
