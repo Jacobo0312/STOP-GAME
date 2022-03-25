@@ -100,8 +100,23 @@ public class Game implements OnMessageListener {
     }
 
     private void calculatePoints() {
-        results[0].setPoints(new int[] { 100, 100, 100, 100, 100 });
-        results[1].setPoints(new int[] { 100, 100, 100, 100, 100 });
+        results[0].setPoints(400);
+        results[1].setPoints(400);
+        if (results[0].getName().equals(results[1].getName())) {
+            results[0].subPoints(50);
+        }
+
+        if (results[0].getAnimal().equals(results[1].getAnimal())) {
+            results[0].subPoints(50);
+        }
+
+        if (results[0].getSite().equals(results[1].getSite())) {
+            results[0].subPoints(50);
+        }
+
+        if (results[0].getThing().equals(results[1].getThing())) {
+            results[0].subPoints(50);
+        }
 
     }
 

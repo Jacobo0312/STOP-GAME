@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Arrays;
-
 public class Words {
 
     public String type = "Words";
@@ -10,15 +8,15 @@ public class Words {
     private String thing;
     private String site;
     private int id;
-    private int [] points;
+    private int points;
 
-    public Words(int id,String name, String animal, String thing, String site) {
-        this.id=id;
+    public Words(int id, String name, String animal, String thing, String site) {
+        this.id = id;
         this.name = name;
         this.animal = animal;
         this.thing = thing;
         this.site = site;
-        this.points= new int [5];
+        this.points=0;
     }
 
     public String getName() {
@@ -69,13 +67,12 @@ public class Words {
         this.id = id;
     }
 
-    public int[] getPoints() {
+    public int getPoints() {
         return points;
     }
 
-    public void setPoints(int[] points) {
+    public void setPoints(int points) {
         this.points = points;
     }
-   
 
 }

@@ -39,5 +39,9 @@
       <Label fx:id="ownObjectResult" layoutX="275.0" layoutY="309.0" text="Texto (100)" />
       <Label fx:id="opponentObjectResult" layoutX="431.0" layoutY="309.0" text="Texto (50)" />
       <Button fx:id="finishBtn" layoutX="269.0" layoutY="439.0" mnemonicParsing="false" text="Finalizar" />
+      <Separator layoutX="177.0" layoutY="308.0" prefWidth="200.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="345.0" />
+      <Label layoutX="42.0" layoutY="364.0" text="Total" AnchorPane.leftAnchor="36.0" />
+      <Label fx:id="ownTotal" layoutX="275.0" layoutY="364.0" text="Texto (100)" />
+      <Label fx:id="opponentTotal" layoutX="431.0" layoutY="364.0" text="Texto (50)" />
    </children>
 </AnchorPane>
