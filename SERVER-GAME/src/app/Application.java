@@ -54,7 +54,6 @@ public class Application implements OnMessageListener, NewClientListener, Finish
 	@Override
 	public void finishGame(Game game) {
 		games.remove(game);
-
 	}
 
 }

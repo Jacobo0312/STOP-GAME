@@ -1,9 +1,7 @@
 package model;
 
 import java.util.UUID;
-
 import com.google.gson.Gson;
-
 import comm.Client;
 import comm.Receiver.OnMessageListener;
 
